@@ -23,6 +23,21 @@ Pagine delle release pubbliche:
 6. Nella Home di ciascuna app premi il comando per abilitare il microfono e concedi il permesso richiesto, per la dettatura nelle ricerche.
 7. Collega il telefono ad Android Auto e apri l'app desiderata. La disponibilità e l'area di visualizzazione dipendono dal telefono e dall'autoradio.
 
+## Se l'installazione viene bloccata
+
+Su alcuni telefoni l'installazione può essere bloccata da **Google Play Protect**, dal **Blocco automatico Samsung** o da entrambe le protezioni.
+
+Se il blocco riguarda un APK di provenienza verificata, scaricato dai collegamenti ufficiali di questa guida, può essere necessario disattivare temporaneamente la protezione che impedisce l'installazione; se intervengono entrambe, potrebbe essere necessario disattivarle entrambe per completarla.
+
+- **Samsung — Blocco automatico:** Impostazioni → Sicurezza e privacy → Blocco automatico.
+- **Google Play Protect:** Play Store → icona del profilo → Play Protect → Impostazioni → Analizza le app con Play Protect.
+
+Autorizza anche l'installazione di app sconosciute per l'app utilizzata per installare l'APK, se Android lo richiede. Installa Connect 2.0.1 tramite KingInstaller e Parking aprendo normalmente il suo APK.
+
+**Terminata l'installazione, riattiva subito le protezioni disattivate.**
+
+Non è garantita l'assenza di ulteriori avvisi: Play Protect controlla anche le app già installate. Se segnala esplicitamente l'app come dannosa, fai verificare la segnalazione prima di procedere.
+
 ## Le due applicazioni
 
 Connect 2.0.1 e Parking 1.0.9 sono due applicazioni separate e possono essere installate insieme.
