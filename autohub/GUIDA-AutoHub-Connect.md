@@ -1,5 +1,5 @@
 # AutoHub Connect e AutoHub Connect Parking
-By Zicspanico — Francesco Arnone
+By Zixpanico
 
 ## Download ufficiali
 
@@ -31,7 +31,7 @@ Connect 2.0.1 e Parking 1.0.9 sono due applicazioni separate e possono essere in
 
 Ciascuna app dispone di una prova gratuita di 7 giorni, distinta da quella dell'altra app. Per iniziare la prova non serve un codice.
 
-Per la licenza a vita contatta Francesco: **zicspanico@hotmail.it**.
+Per la licenza a vita contatta Zixpanico: **zicspanico@hotmail.it**.
 
 Lo stesso codice di attivazione può essere inserito separatamente nelle due applicazioni sullo stesso telefono.
 
