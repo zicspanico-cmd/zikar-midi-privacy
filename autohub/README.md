@@ -1,9 +1,11 @@
-# AutoHub EC3 1.0.6
+# AutoHub EC3 1.0.7
 
-[Scarica AutoHub aggiornato](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-EC3.apk).
+APK Android 11 e successivi (API 30). Stesso package e firma della 1.0.6: aggiornare senza disinstallare.
 
-Home telefono con otto riquadri: Lettore, Mirroring, File, Cartella, Aggiornamenti, Lingua, Sfondo auto, Microfono. Icone e descrizioni per ogni comando, senza ingranaggio nella home. Guida iniziale aggiornata. Conservate le funzioni della 1.0.5.
+Download: [AutoHub EC3](AutoHub-EC3.apk). Il controllo Aggiornamenti dell’app legge latest.json; il download e l’installazione richiedono l’azione dell’utente.
 
-Android 14 o superiore. Installare sopra la versione esistente senza disinstallare. APK firmato con la firma originale AutoHub AARE. `latest.json` consente alle versioni 1.0.4 e successive di rilevare la 1.0.6. Dalla 1.0.4/1.0.5: Impostazioni → Aggiornamenti → Verifica aggiornamenti. Dalla 1.0.6: riquadro Aggiornamenti nella home. Il controllo automatico avviene con un intervallo di sei ore; il controllo manuale è immediato. La propagazione delle modifiche su GitHub può richiedere alcuni minuti.
+Su Android 11–13 il mirroring condivide l’intero schermo, incluse eventuali notifiche. Da Android 14 il selettore di sistema può offrire la singola app. Audio delle app sorgenti soggetto alle relative autorizzazioni.
 
-Compilazione, firma, package e versione verificati. Prova sul dispositivo e sull’auto ancora necessaria. Sfondo auto cambia lo sfondo di AutoHub sull’auto.
+Compilazione, firma, controlli statici delle API e test automatici superati. Collaudo su telefono e Android Auto reali ancora necessario. La compatibilità del collegamento dipende anche dal telefono, dall’host Android Auto e dall’auto.
+
+Non disinstallare prima dell’aggiornamento: si conservano i dati dell’app. Questa cartella contiene esclusivamente la distribuzione pubblica, senza credenziali o chiavi private.
