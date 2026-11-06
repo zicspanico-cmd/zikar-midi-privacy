@@ -6,5 +6,6 @@
   "apkUrl": "https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-EC3-1.0.9.apk",
   "sha256": "69895319ac3a9c14d4dcf0282aa6b6b43c62cb839bd9d2294f2808bd51a571ae",
   "sourceCommit": "b3ee6af687c22ce1b74d60ad4b14fc6d8e17a7f4",
-  "connectSourceCommit": "d61f0be06b8ed0d9b04a20db4c8ef9419672a07c"
+  "connectSourceCommit": "d61f0be06b8ed0d9b04a20db4c8ef9419672a07c",
+  "publicationAttempt": 2
 }

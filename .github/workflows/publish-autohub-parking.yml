@@ -18,13 +18,15 @@ jobs:
       GH_REPO: ${{ github.repository }}
       TAG: autohub-parking-v1.0.9
     steps:
-      - name: Download and verify the locally built APK
+      - name: Check out the published payload
+        uses: actions/checkout@v4
+      - name: Verify the locally built APK
         shell: bash
         run: |
           set -euo pipefail
-          gh api -H 'Accept: application/vnd.github.raw+json' "repos/$GH_REPO/contents/autohub/AutoHub-EC3-1.0.9.apk?ref=$GITHUB_SHA" > AutoHub-EC3-1.0.9.apk
-          gh api -H 'Accept: application/vnd.github.raw+json' "repos/$GH_REPO/contents/autohub/releases/autohub-parking-v1.0.9.md?ref=$GITHUB_SHA" > notes.md
-          gh api -H 'Accept: application/vnd.github.raw+json' "repos/$GH_REPO/contents/autohub/latest.json?ref=$GITHUB_SHA" > latest.json
+          cp autohub/AutoHub-EC3-1.0.9.apk AutoHub-EC3-1.0.9.apk
+          cp autohub/releases/autohub-parking-v1.0.9.md notes.md
+          cp autohub/latest.json latest.json
           python3 - <<'PY'
           import hashlib, json
           from pathlib import Path
