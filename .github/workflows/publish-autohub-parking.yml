@@ -1,0 +1,44 @@
+name: Publish AutoHub Connect Parking
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'autohub/releases/autohub-parking-v1.0.9.json'
+permissions:
+  contents: write
+concurrency:
+  group: autohub-parking-release-1-0-9
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      TAG: autohub-parking-v1.0.9
+    steps:
+      - name: Download and verify the locally built APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api -H 'Accept: application/vnd.github.raw+json' "repos/$GH_REPO/contents/autohub/AutoHub-EC3-1.0.9.apk?ref=$GITHUB_SHA" > AutoHub-EC3-1.0.9.apk
+          gh api -H 'Accept: application/vnd.github.raw+json' "repos/$GH_REPO/contents/autohub/releases/autohub-parking-v1.0.9.md?ref=$GITHUB_SHA" > notes.md
+          gh api -H 'Accept: application/vnd.github.raw+json' "repos/$GH_REPO/contents/autohub/latest.json?ref=$GITHUB_SHA" > latest.json
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          expected = json.loads(Path('latest.json').read_text())['sha256']
+          actual = hashlib.sha256(Path('AutoHub-EC3-1.0.9.apk').read_bytes()).hexdigest()
+          assert actual == expected, 'APK checksum mismatch'
+          Path('SHA256SUMS.txt').write_text(actual + '  AutoHub-EC3-1.0.9.apk\n')
+          print('Verified signed APK payload; no APK build performed')
+          PY
+      - name: Publish release and assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --target "$GITHUB_SHA" --title 'AutoHub Connect Parking 1.0.9' --notes-file notes.md
+          fi
+          gh release upload "$TAG" AutoHub-EC3-1.0.9.apk SHA256SUMS.txt --clobber
