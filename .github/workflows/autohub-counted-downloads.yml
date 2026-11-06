@@ -42,13 +42,15 @@ jobs:
           fi
           gh release download "$tag" --pattern "$asset" --dir "$RUNNER_TEMP/verify" --repo "$GITHUB_REPOSITORY"
           test "$(sha256sum "$RUNNER_TEMP/verify/$asset" | cut -d ' ' -f 1)" = "$expected"
-          url="https://github.com/$GITHUB_REPOSITORY/releases/download/$tag/$asset"
+          # Older installed apps only accept versioned APK URLs under the raw download root.
+          url="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/autohub/AutoHub-EC3-$version.apk"
+          cp "$apk" "autohub/AutoHub-EC3.apk"
           jq --arg url "$url" '.apkUrl = $url' autohub/latest.json > "$RUNNER_TEMP/latest.json"
           cp "$RUNNER_TEMP/latest.json" autohub/latest.json
-          if ! git diff --quiet -- autohub/latest.json; then
+          if ! git diff --quiet -- autohub/latest.json autohub/AutoHub-EC3.apk; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add autohub/latest.json
-            git commit -m "Route AutoHub $version updates through counted release asset"
+            git add autohub/latest.json autohub/AutoHub-EC3.apk
+            git commit -m "Keep AutoHub $version legacy updates and direct download in sync"
             git push
           fi
