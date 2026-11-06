@@ -1,0 +1,54 @@
+name: Publish counted AutoHub downloads
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'autohub/latest.json'
+      - '.github/workflows/autohub-counted-downloads.yml'
+permissions:
+  contents: write
+concurrency:
+  group: autohub-public-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify APK and publish release asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          version="$(jq -r .versionName autohub/latest.json)"
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          apk="autohub/AutoHub-EC3-$version.apk"
+          test -f "$apk"
+          expected="$(jq -r .sha256 autohub/latest.json)"
+          actual="$(sha256sum "$apk" | cut -d ' ' -f 1)"
+          test "$expected" = "$actual"
+          tag="autohub-v$version"
+          if ! gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$tag" --repo "$GITHUB_REPOSITORY" --title "AutoHub EC3 $version" --notes "APK AutoHub EC3 $version. Installare sopra la versione precedente." --latest
+          fi
+          asset="AutoHub-EC3.apk"
+          existing="$(gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json assets --jq '.assets[] | select(.name == "AutoHub-EC3.apk") | .name')"
+          if [[ -z "$existing" ]]; then
+            mkdir -p "$RUNNER_TEMP/autohub"
+            cp "$apk" "$RUNNER_TEMP/autohub/$asset"
+            gh release upload "$tag" "$RUNNER_TEMP/autohub/$asset" --repo "$GITHUB_REPOSITORY"
+          fi
+          gh release download "$tag" --pattern "$asset" --dir "$RUNNER_TEMP/verify" --repo "$GITHUB_REPOSITORY"
+          test "$(sha256sum "$RUNNER_TEMP/verify/$asset" | cut -d ' ' -f 1)" = "$expected"
+          url="https://github.com/$GITHUB_REPOSITORY/releases/download/$tag/$asset"
+          jq --arg url "$url" '.apkUrl = $url' autohub/latest.json > "$RUNNER_TEMP/latest.json"
+          cp "$RUNNER_TEMP/latest.json" autohub/latest.json
+          if ! git diff --quiet -- autohub/latest.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add autohub/latest.json
+            git commit -m "Route AutoHub $version updates through counted release asset"
+            git push
+          fi
