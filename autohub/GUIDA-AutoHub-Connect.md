@@ -11,6 +11,22 @@ Pagine delle release pubbliche:
 - [Connect 2.0.1](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/tag/autohub-connect-v2.0.1)
 - [Parking 1.0.9](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/tag/autohub-parking-v1.0.9)
 
+## Prima del collegamento all'auto: configura Android Auto
+
+Esegui questi passaggi sul telefono prima di aprire le app sul display dell'auto:
+
+1. Apri le Impostazioni del telefono e cerca **Android Auto**.
+2. Apri le impostazioni di Android Auto e scorri fino a **Versione**.
+3. Tocca Versione per espandere le informazioni, poi tocca **10 volte la sezione con le informazioni su versione e autorizzazioni**.
+4. Conferma l'attivazione delle impostazioni sviluppatore.
+5. Apri il menu **⋮** in alto a destra e seleziona **Impostazioni sviluppatore**.
+6. Scorri e abilita **Origini sconosciute**, che può essere indicata anche come **Sorgenti sconosciute**.
+7. Dopo l'installazione e il primo avvio delle app sul telefono, collega o ricollega il telefono all'auto.
+
+Questa è la modalità sviluppatore di **Android Auto**: è distinta dalle Opzioni sviluppatore generali del telefono. Anche l'opzione Origini sconosciute di Android Auto è distinta dal permesso Android per installare un APK.
+
+Senza questa configurazione le app installate esternamente potrebbero non comparire su Android Auto; la visibilità dipende anche dal tipo di app e dalla compatibilità dell'host.
+
 ## Installazione passo per passo
 
 **Solo AutoHub Connect 2.0.1 deve essere installata tramite KingInstaller. AutoHub Connect Parking 1.0.9 si installa normalmente, aprendo direttamente il suo APK sul telefono.**
