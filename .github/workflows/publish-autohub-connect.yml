@@ -1,0 +1,43 @@
+name: Publish AutoHub Connect 2.0.1
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'autohub/connect/2.0.1/AutoHub-Connect-2.0.1-Finale.apk'
+      - '.github/workflows/publish-autohub-connect.yml'
+permissions:
+  contents: write
+concurrency:
+  group: autohub-connect-release-2-0-1
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      TAG: autohub-connect-v2.0.1
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify signed APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp autohub/connect/2.0.1/AutoHub-Connect-2.0.1-Finale.apk .
+          python3 - <<'PY'
+          import hashlib
+          from pathlib import Path
+          apk = Path('AutoHub-Connect-2.0.1-Finale.apk')
+          actual = hashlib.sha256(apk.read_bytes()).hexdigest()
+          assert actual == '9c21176ba7b090e1d5b8a0fdfa930749c17630681fb22aa7ba3b139d05aa8e2d', 'APK checksum mismatch'
+          Path('SHA256SUMS.txt').write_text(actual + '  ' + apk.name + '\n')
+          PY
+      - name: Publish public release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" --target "$GITHUB_SHA" --title 'AutoHub Connect 2.0.1' --notes-file autohub/connect/2.0.1/RELEASE.md --latest=false
+          fi
+          gh release upload "$TAG" AutoHub-Connect-2.0.1-Finale.apk SHA256SUMS.txt --clobber
