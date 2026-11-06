@@ -13,10 +13,12 @@ Pagine delle release pubbliche:
 
 ## Installazione passo per passo
 
+**Solo AutoHub Connect 2.0.1 deve essere installata tramite KingInstaller. AutoHub Connect Parking 1.0.9 si installa normalmente, aprendo direttamente il suo APK sul telefono.**
+
 1. Scarica e installa KingInstaller sul telefono. Se Android lo richiede, autorizza l'installazione da questa sorgente.
 2. Scarica l'APK finale AutoHub Connect 2.0.1 dal collegamento sopra.
 3. Apri KingInstaller, seleziona l'APK Connect scaricato e avvia l'installazione.
-4. Scarica e installa anche AutoHub Connect Parking 1.0.9. Se hai già la precedente AutoHub ë-C3 1.0.8, installa l'aggiornamento sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
+4. Scarica AutoHub Connect Parking 1.0.9 e apri direttamente l'APK sul telefono per installarla normalmente. Per Parking non serve KingInstaller. Se hai già la precedente AutoHub ë-C3 1.0.8, installa l'aggiornamento sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
 5. Apri entrambe le app sul telefono, una alla volta, con Internet disponibile per avviare la prova.
 6. Nella Home di ciascuna app premi il comando per abilitare il microfono e concedi il permesso richiesto, per la dettatura nelle ricerche.
 7. Collega il telefono ad Android Auto e apri l'app desiderata. La disponibilità e l'area di visualizzazione dipendono dal telefono e dall'autoradio.
