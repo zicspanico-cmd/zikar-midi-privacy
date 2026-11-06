@@ -25,7 +25,12 @@ Pagine delle release pubbliche:
 
 ## Le due applicazioni
 
-Connect 2.0.1 e Parking 1.0.9 sono due applicazioni separate e possono essere installate insieme. Parking offre la visualizzazione a pieno schermo da parcheggiati; Connect si adatta all'area assegnata da Android Auto. Per video, YouTube, navigazione web e mirroring usa le app con il veicolo parcheggiato.
+Connect 2.0.1 e Parking 1.0.9 sono due applicazioni separate e possono essere installate insieme.
+
+- **AutoHub Connect 2.0.1** è utilizzabile anche durante la guida e si adatta all'area di visualizzazione assegnata da Android Auto.
+- **AutoHub Connect Parking 1.0.9** è utilizzabile soltanto con il veicolo parcheggiato e offre la visualizzazione a pieno schermo.
+
+Per chi guida, video, YouTube, navigazione web e mirroring vanno utilizzati con il veicolo parcheggiato.
 
 ## Prova e attivazione
 
