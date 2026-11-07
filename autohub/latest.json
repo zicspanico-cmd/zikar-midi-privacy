@@ -1,8 +1,8 @@
 {
   "packageName": "it.autohub.ec3.hostprobe",
-  "versionCode": 109,
-  "versionName": "1.0.9",
+  "versionCode": 110,
+  "versionName": "1.0.10",
   "minSdk": 30,
-  "apkUrl": "https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-EC3-1.0.9.apk",
-  "sha256": "69895319ac3a9c14d4dcf0282aa6b6b43c62cb839bd9d2294f2808bd51a571ae"
+  "apkUrl": "https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-EC3-1.0.10.apk",
+  "sha256": "6f3c8366fbc40d62f9189aeb5693069928210a377c67f0f7ed3cbab869508419"
 }

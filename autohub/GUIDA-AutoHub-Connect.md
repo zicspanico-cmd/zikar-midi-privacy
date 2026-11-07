@@ -5,11 +5,11 @@ By Zicspanico
 
 - [KingInstaller 2.5 — APK dal progetto ufficiale](https://github.com/fcaronte/KingInstaller/releases/download/2.5/KingInstaller-v2.5.apk)
 - [AutoHub Connect 2.0.1 — APK finale](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-connect-v2.0.1/AutoHub-Connect-2.0.1-Finale.apk)
-- [AutoHub Connect Parking 1.0.9 — APK](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-parking-v1.0.9/AutoHub-EC3-1.0.9.apk)
+- [AutoHub Connect Parking 1.0.10 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-EC3-1.0.10.apk)
 
-Pagine delle release pubbliche:
+Informazioni sulle versioni pubbliche:
 - [Connect 2.0.1](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/tag/autohub-connect-v2.0.1)
-- [Parking 1.0.9](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/tag/autohub-parking-v1.0.9)
+- [Parking 1.0.10](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/PARKING-1.0.10.md)
 
 ## Prima del collegamento all'auto: configura Android Auto
 
@@ -29,12 +29,12 @@ Senza questa configurazione le app installate esternamente potrebbero non compar
 
 ## Installazione passo per passo
 
-**Solo AutoHub Connect 2.0.1 deve essere installata tramite KingInstaller. AutoHub Connect Parking 1.0.9 si installa normalmente, aprendo direttamente il suo APK sul telefono.**
+**Solo AutoHub Connect 2.0.1 deve essere installata tramite KingInstaller. AutoHub Connect Parking 1.0.10 si installa normalmente, aprendo direttamente il suo APK sul telefono.**
 
 1. Scarica e installa KingInstaller sul telefono. Se Android lo richiede, autorizza l'installazione da questa sorgente.
 2. Scarica l'APK finale AutoHub Connect 2.0.1 dal collegamento sopra.
 3. Apri KingInstaller, seleziona l'APK Connect scaricato e avvia l'installazione.
-4. Scarica AutoHub Connect Parking 1.0.9 e apri direttamente l'APK sul telefono per installarla normalmente. Per Parking non serve KingInstaller. Se hai già la precedente AutoHub ë-C3 1.0.8, installa l'aggiornamento sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
+4. Scarica AutoHub Connect Parking 1.0.10 e apri direttamente l'APK sul telefono per installarla normalmente. Per Parking non serve KingInstaller. Se hai già la precedente AutoHub ë-C3 1.0.8, installa l'aggiornamento sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
 5. Apri entrambe le app sul telefono, una alla volta, con Internet disponibile per avviare la prova.
 6. Nella Home di ciascuna app premi il comando per abilitare il microfono e concedi il permesso richiesto, per la dettatura nelle ricerche.
 7. Collega il telefono ad Android Auto e apri l'app desiderata. La disponibilità e l'area di visualizzazione dipendono dal telefono e dall'autoradio.
@@ -56,10 +56,10 @@ Non è garantita l'assenza di ulteriori avvisi: Play Protect controlla anche le 
 
 ## Le due applicazioni
 
-Connect 2.0.1 e Parking 1.0.9 sono due applicazioni separate e possono essere installate insieme.
+Connect 2.0.1 e Parking 1.0.10 sono due applicazioni separate e possono essere installate insieme.
 
 - **AutoHub Connect 2.0.1** è utilizzabile anche durante la guida e si adatta all'area di visualizzazione assegnata da Android Auto.
-- **AutoHub Connect Parking 1.0.9** è utilizzabile soltanto con il veicolo parcheggiato e offre la visualizzazione a pieno schermo.
+- **AutoHub Connect Parking 1.0.10** è utilizzabile soltanto con il veicolo parcheggiato e offre la visualizzazione a pieno schermo.
 
 Per chi guida, video, YouTube, navigazione web e mirroring vanno utilizzati con il veicolo parcheggiato.
 
@@ -67,7 +67,13 @@ Per chi guida, video, YouTube, navigazione web e mirroring vanno utilizzati con 
 
 Ciascuna app dispone di una prova gratuita di 7 giorni, distinta da quella dell'altra app. Per iniziare la prova non serve un codice.
 
-Per la licenza a vita contatta Zicspanico: **zicspanico@hotmail.it**.
+Con un contributo di 5 € sostieni lo sviluppo di AutoHub e ricevi in omaggio un codice di accesso valido per Auto Hub Connect 2.0 e Auto Hub Connect Parking.
+
+Da Parking 1.0.10 premi **Dona · Sostieni AutoHub · 5 €**, indica l’email e completa il contributo su PayPal. Torna in Parking: dopo la conferma del pagamento l’app si attiva automaticamente e il codice viene inviato all’indirizzo indicato. Inserisci lo stesso codice nell’altra app sullo stesso telefono con Internet disponibile.
+
+Se la licenza di Parking è già attiva, il pulsante mostra **Licenza già attivata** e non apre un altro pagamento. Se hai già pagato ma non ricevi il codice, contatta il supporto senza ripetere il pagamento.
+
+**Contatti e supporto: zikarmidi.support@gmail.com**.
 
 Lo stesso codice di attivazione può essere inserito separatamente nelle due applicazioni sullo stesso telefono.
 
@@ -75,4 +81,4 @@ Lo stesso codice di attivazione può essere inserito separatamente nelle due app
 
 Parking conserva il controllo aggiornamenti del precedente canale. Connect 2.0.1 viene distribuita qui tramite il proprio APK finale e non include un controllo aggiornamenti automatico.
 
-Il file Parking mantiene il nome tecnico AutoHub-EC3-1.0.9.apk: è l'APK della release AutoHub Connect Parking 1.0.9.
+Il file Parking mantiene il nome tecnico AutoHub-EC3-1.0.10.apk: è l'APK della versione AutoHub Connect Parking 1.0.10.
