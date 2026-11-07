@@ -14,6 +14,6 @@ Nuovo pulsante nella home del telefono: **Installa AutoHub Connect 2.0**.
 
 Verifiche: compilazione locale con SDK API 37 e Build Tools 36.0.0, firma e allineamento APK, compatibilità statica Android 11, traduzioni e controlli di integrità sui due APK ufficiali. Verificato il codice dell'handler APK nel tag KingInstaller 2.5.
 
-La prova completa su telefono e Android Auto resta da eseguire. L'invio a KingInstaller non garantisce da solo il riconoscimento dell'app o funzioni aggiuntive su tutte le configurazioni.
+Il proprietario ha confermato il funzionamento della procedura e approvato la pubblicazione come aggiornamento. La conferma riguarda la configurazione provata; non costituisce una verifica su tutti i telefoni e gli host Android Auto.
 
 Sorgenti KingInstaller 2.5 (GPL-3.0): https://github.com/fcaronte/KingInstaller/tree/2.5
