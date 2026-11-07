@@ -42,6 +42,19 @@ jobs:
           fi
           gh release download "$tag" --pattern "$asset" --dir "$RUNNER_TEMP/verify" --repo "$GITHUB_REPOSITORY"
           test "$(sha256sum "$RUNNER_TEMP/verify/$asset" | cut -d ' ' -f 1)" = "$expected"
+          notes="autohub/releases/autohub-parking-v$version.md"
+          if [[ -f "$notes" ]]; then
+            gh release edit "$tag" --repo "$GITHUB_REPOSITORY" --title "AutoHub Connect Parking $version" --notes-file "$notes" --latest
+          else
+            gh release edit "$tag" --repo "$GITHUB_REPOSITORY" --title "AutoHub Connect Parking $version" --latest
+          fi
+          mkdir -p "$RUNNER_TEMP/autohub"
+          versioned_asset="AutoHub-Connect-Parking-$version.apk"
+          cp "$apk" "$RUNNER_TEMP/autohub/$versioned_asset"
+          gh release upload "$tag" "$RUNNER_TEMP/autohub/$versioned_asset" --repo "$GITHUB_REPOSITORY" --clobber
+          mkdir -p "$RUNNER_TEMP/verify-versioned"
+          gh release download "$tag" --pattern "$versioned_asset" --dir "$RUNNER_TEMP/verify-versioned" --repo "$GITHUB_REPOSITORY"
+          test "$(sha256sum "$RUNNER_TEMP/verify-versioned/$versioned_asset" | cut -d ' ' -f 1)" = "$expected"
           # Older installed apps only accept versioned APK URLs under the raw download root.
           url="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/main/autohub/AutoHub-EC3-$version.apk"
           cp "$apk" "autohub/AutoHub-EC3.apk"
