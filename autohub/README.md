@@ -1,11 +1,13 @@
-# AutoHub EC3 1.0.7
+# AutoHub · distribuzione pubblica
 
-APK Android 11 e successivi (API 30). Stesso package e firma della 1.0.6: aggiornare senza disinstallare.
+By Zicspanico. Questa cartella contiene solo APK firmati, feed di aggiornamento e note pubbliche: nessuna credenziale o chiave privata.
 
-Download: [AutoHub EC3](AutoHub-EC3.apk). Il controllo Aggiornamenti dell’app legge latest.json; il download e l’installazione richiedono l’azione dell’utente.
+| App | Versione | APK | Feed |
+|---|---|---|---|
+| AutoHub Connect Parking | 1.0.13 (113) | [AutoHub-EC3-1.0.13.apk](AutoHub-EC3-1.0.13.apk) | [latest.json](latest.json) |
+| AutoHub Connect | 2.0.3 (207) | [connect/2.0.3/AutoHub-Connect-2.0.3.apk](connect/2.0.3/AutoHub-Connect-2.0.3.apk) | [connect/latest.json](connect/latest.json) |
 
-Su Android 11–13 il mirroring condivide l’intero schermo, incluse eventuali notifiche. Da Android 14 il selettore di sistema può offrire la singola app. Audio delle app sorgenti soggetto alle relative autorizzazioni.
-
-Compilazione, firma, controlli statici delle API e test automatici superati. Collaudo su telefono e Android Auto reali ancora necessario. La compatibilità del collegamento dipende anche dal telefono, dall’host Android Auto e dall’auto.
-
-Non disinstallare prima dell’aggiornamento: si conservano i dati dell’app. Questa cartella contiene esclusivamente la distribuzione pubblica, senza credenziali o chiavi private.
+- `AutoHub-EC3.apk` è una copia del Parking corrente, mantenuta per i collegamenti storici.
+- Le due app sono separate (package `it.autohub.ec3.hostprobe` e `it.autohub.connect`), con lo stesso certificato originale: aggiornare senza disinstallare.
+- Android 11 (API 30) o successivo. Guida completa: [GUIDA-AutoHub-Connect.md](GUIDA-AutoHub-Connect.md). Supporto: zikarmidi.support@gmail.com.
+- Hash SHA-256: [SHA256SUMS.txt](SHA256SUMS.txt) e [connect/2.0.3/SHA256SUMS.txt](connect/2.0.3/SHA256SUMS.txt).
