@@ -1,0 +1,8 @@
+{
+  "packageName": "it.autohub.connect",
+  "versionCode": 207,
+  "versionName": "2.0.3",
+  "minSdk": 30,
+  "apkUrl": "https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/connect/2.0.3/AutoHub-Connect-2.0.3.apk",
+  "sha256": "a54def765a92aa92c2c04bd4c5d57b883d3969789189b4c5d20435f2a964d2ee"
+}
