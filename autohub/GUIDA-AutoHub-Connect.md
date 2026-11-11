@@ -5,7 +5,7 @@ By Zicspanico
 
 - [KingInstaller 2.5 — APK dal progetto ufficiale](https://github.com/fcaronte/KingInstaller/releases/download/2.5/KingInstaller-v2.5.apk)
 - [AutoHub Connect 2.0.30 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/connect/2.0.30/AutoHub-Connect-2.0.30.apk)
-- [AutoHub Connect Parking 1.0.40 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-EC3-1.0.40.apk)
+- [AutoHub Connect Parking 1.0.40 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-Connect-Parking.apk)
 
 Informazioni sulle versioni pubbliche:
 - [Connect 2.0.30](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/connect/2.0.30/RELEASE.md)
@@ -31,7 +31,7 @@ Senza questa configurazione le app installate esternamente potrebbero non compar
 
 **Solo AutoHub Connect deve essere installata tramite KingInstaller. AutoHub Connect Parking 1.0.40 si installa normalmente, aprendo direttamente il suo APK sul telefono.**
 
-1. Scarica AutoHub Connect Parking 1.0.40 e apri direttamente l'APK sul telefono. Se hai già Parking (o la precedente AutoHub ë-C3), installa sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
+1. Scarica AutoHub Connect Parking 1.0.40 e apri direttamente l'APK sul telefono. Se hai già Parking, installa sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
 2. In Parking tocca **AutoHub Connect 2.0 · Download e aggiornamento** (anche durante la prova gratuita). L'app prepara KingInstaller 2.5, controlla l'ultima versione Connect pubblicata, la scarica, ne verifica firma e SHA-256 e la passa a KingInstaller. Premi Installa e conferma le richieste del sistema.
 3. In alternativa, installa KingInstaller dal collegamento sopra, scarica l'APK Connect 2.0.30 e aprilo con KingInstaller.
 4. Se Connect è già installata, la stessa procedura la aggiorna senza disinstallarla. Se è già all'ultima versione, il pulsante resta disattivato e compare «AutoHub Connect è aggiornato».
@@ -85,7 +85,7 @@ Lo stesso codice di attivazione può essere inserito separatamente nelle due app
 
 Parking conserva il proprio controllo aggiornamenti (canale `autohub/latest.json`). Gli aggiornamenti di Connect si controllano da Parking con il riquadro **AutoHub Connect 2.0 · Download e aggiornamento** (canale `autohub/connect/latest.json`); la Home di Connect non include un controllo aggiornamenti proprio.
 
-Il file Parking mantiene il nome tecnico AutoHub-EC3-1.0.40.apk: è l'APK della versione AutoHub Connect Parking 1.0.40.
+Il file da scaricare si chiama AutoHub-Connect-Parking.apk ed è sempre l'ultima versione di AutoHub Connect Parking. AutoHub funziona con tutte le auto compatibili con Android Auto.
 
 ## Privacy e diagnostica anonima
 
