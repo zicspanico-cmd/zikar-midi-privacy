@@ -17,6 +17,6 @@ Package `it.autohub.connect`, versionCode 234, certificato originale. Aggiorna l
 
 Installazione o aggiornamento: da AutoHub Connect Parking, riquadro **AutoHub Connect 2.0 · Download e aggiornamento** → KingInstaller.
 
-Verifiche: firma con il certificato originale verificata con apksigner e androguard, zipalign, test automatici di Connect (lingue, aggiornamenti, compatibilità Android 11). Non ancora confermati in auto prima della pubblicazione: la musica che continua con il navigatore e l'avvio rete della 2.0.25.
+Verifiche: firma con il certificato originale verificata con apksigner e androguard, zipalign, test automatici di Connect (lingue, aggiornamenti, compatibilità Android 11). Provata dal proprietario in auto: la musica continua con il navigatore accanto a Connect. Avvio della rete con Android Auto senza fili in verifica.
 
 SHA-256: `888bc644d2aee732cab69273e93388593df8c767d031e1d5b9ad4900c36f9fdc`
