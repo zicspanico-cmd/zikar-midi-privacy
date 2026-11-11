@@ -4,7 +4,7 @@ By Zicspanico. Questa cartella contiene solo APK firmati, feed di aggiornamento 
 
 | App | Versione | APK | Feed |
 |---|---|---|---|
-| AutoHub Connect Parking | 1.0.43 (143) | [AutoHub-Connect-Parking.apk](AutoHub-Connect-Parking.apk) | [latest.json](latest.json) |
+| AutoHub Connect Parking | 1.0.46 (146) | [AutoHub-Connect-Parking.apk](AutoHub-Connect-Parking.apk) | [latest.json](latest.json) |
 | AutoHub Connect | 2.0.34 (238) | [connect/2.0.34/AutoHub-Connect-2.0.34.apk](connect/2.0.34/AutoHub-Connect-2.0.34.apk) | [connect/latest.json](connect/latest.json) |
 
 - `AutoHub-Connect-Parking.apk` è sempre l'ultima versione di Parking. Le copie con il vecchio nome tecnico restano solo per gli aggiornamenti automatici delle app già installate.
