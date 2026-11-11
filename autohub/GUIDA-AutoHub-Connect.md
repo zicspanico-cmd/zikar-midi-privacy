@@ -4,11 +4,11 @@ By Zicspanico
 ## Download ufficiali
 
 - [KingInstaller 2.5 — APK dal progetto ufficiale](https://github.com/fcaronte/KingInstaller/releases/download/2.5/KingInstaller-v2.5.apk)
-- [AutoHub Connect 2.0.33 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/connect/2.0.33/AutoHub-Connect-2.0.33.apk)
+- [AutoHub Connect 2.0.34 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/connect/2.0.34/AutoHub-Connect-2.0.34.apk)
 - [AutoHub Connect Parking 1.0.43 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-Connect-Parking.apk)
 
 Informazioni sulle versioni pubbliche:
-- [Connect 2.0.33](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/connect/2.0.33/RELEASE.md)
+- [Connect 2.0.34](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/connect/2.0.34/RELEASE.md)
 - [Parking 1.0.43](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/releases/autohub-parking-v1.0.43.md)
 
 ## Prima del collegamento all'auto: configura Android Auto
@@ -33,7 +33,7 @@ Senza questa configurazione le app installate esternamente potrebbero non compar
 
 1. Scarica AutoHub Connect Parking 1.0.43 e apri direttamente l'APK sul telefono. Se hai già Parking, installa sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
 2. In Parking tocca **AutoHub Connect 2.0 · Download e aggiornamento** (anche durante la prova gratuita). L'app prepara KingInstaller 2.5, controlla l'ultima versione Connect pubblicata, la scarica, ne verifica firma e SHA-256 e la passa a KingInstaller. Premi Installa e conferma le richieste del sistema.
-3. In alternativa, installa KingInstaller dal collegamento sopra, scarica l'APK Connect 2.0.33 e aprilo con KingInstaller.
+3. In alternativa, installa KingInstaller dal collegamento sopra, scarica l'APK Connect 2.0.34 e aprilo con KingInstaller.
 4. Se Connect è già installata, la stessa procedura la aggiorna senza disinstallarla. Se è già all'ultima versione, il pulsante resta disattivato e compare «AutoHub Connect è aggiornato».
 5. Apri entrambe le app sul telefono, una alla volta, con Internet disponibile per avviare la prova.
 6. Nella Home di ciascuna app premi il comando per abilitare il microfono e concedi il permesso richiesto, per la dettatura nelle ricerche.
@@ -56,9 +56,9 @@ Non è garantita l'assenza di ulteriori avvisi: Play Protect controlla anche le 
 
 ## Le due applicazioni
 
-Connect 2.0.33 e Parking 1.0.43 sono due applicazioni separate e possono essere installate insieme.
+Connect 2.0.34 e Parking 1.0.43 sono due applicazioni separate e possono essere installate insieme.
 
-- **AutoHub Connect 2.0.33** è utilizzabile anche durante la guida e si adatta all'area di visualizzazione assegnata da Android Auto.
+- **AutoHub Connect 2.0.34** è utilizzabile anche durante la guida e si adatta all'area di visualizzazione assegnata da Android Auto.
 - **AutoHub Connect Parking 1.0.43** è utilizzabile soltanto con il veicolo parcheggiato e offre la visualizzazione a pieno schermo.
 
 Per chi guida, video, YouTube, navigazione web e mirroring vanno utilizzati con il veicolo parcheggiato.

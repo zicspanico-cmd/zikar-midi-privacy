@@ -1,0 +1,2 @@
+5b54325f5bfd3aa2b96c25e305745cb8b57ea115d33af59cbefda5e3afd0963d  AutoHub-KingInstaller-2.5-autohub.1.apk
+7d4f061eb6dc22529605869b362076444d004fb14a8cc0b7d0b4d13872f69dde  AutoHub-KingInstaller-2.5-autohub.1-sorgenti.zip
