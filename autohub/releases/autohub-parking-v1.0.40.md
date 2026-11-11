@@ -2,9 +2,9 @@
 
 By Zicspanico · 11 novembre 2026
 
-[Scarica Parking 1.0.40](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-EC3-1.0.40.apk)
+[Scarica Parking 1.0.40](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-v1.0.40/AutoHub-Connect-Parking-1.0.40.apk)
 
-Package `it.autohub.ec3.hostprobe`, versionCode 140, certificato originale. Installa **sopra** la versione attuale, senza disinstallare: dati, prova e attivazione restano. Numero più alto di tutte le versioni di prova (1.0.18–1.0.37).
+versionCode 140, certificato originale. Installa **sopra** la versione attuale, senza disinstallare: dati, prova e attivazione restano. Numero più alto di tutte le versioni di prova (1.0.18–1.0.37).
 
 - **Web** in stile browser: pagina iniziale con ricerca grande e microfono, preferiti a schede (fino a 8); sui siti barra sottile ‹ › ⟳ · indirizzo con microfono · ★ · Aa · ⌂. Il Web è a tutto schermo: ogni tocco va alla pagina, barra e comandi si aprono dalla maniglia ≡.
 - **YouTube** in versione larga, ▶ grande al centro quando è in pausa. Accesso all'account con «Accedi» di YouTube sullo stereo.
