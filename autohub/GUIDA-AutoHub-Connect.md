@@ -4,12 +4,12 @@ By Zicspanico
 ## Download ufficiali
 
 - [KingInstaller 2.5 — APK dal progetto ufficiale](https://github.com/fcaronte/KingInstaller/releases/download/2.5/KingInstaller-v2.5.apk)
-- [AutoHub Connect 2.0.7 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/connect/2.0.7/AutoHub-Connect-2.0.7.apk)
-- [AutoHub Connect Parking 1.0.17 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-EC3-1.0.17.apk)
+- [AutoHub Connect 2.0.30 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/connect/2.0.30/AutoHub-Connect-2.0.30.apk)
+- [AutoHub Connect Parking 1.0.40 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-EC3-1.0.40.apk)
 
 Informazioni sulle versioni pubbliche:
-- [Connect 2.0.7](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/connect/2.0.7/RELEASE.md)
-- [Parking 1.0.17](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/releases/autohub-parking-v1.0.17.md)
+- [Connect 2.0.30](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/connect/2.0.30/RELEASE.md)
+- [Parking 1.0.40](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/releases/autohub-parking-v1.0.40.md)
 
 ## Prima del collegamento all'auto: configura Android Auto
 
@@ -29,11 +29,11 @@ Senza questa configurazione le app installate esternamente potrebbero non compar
 
 ## Installazione passo per passo
 
-**Solo AutoHub Connect deve essere installata tramite KingInstaller. AutoHub Connect Parking 1.0.17 si installa normalmente, aprendo direttamente il suo APK sul telefono.**
+**Solo AutoHub Connect deve essere installata tramite KingInstaller. AutoHub Connect Parking 1.0.40 si installa normalmente, aprendo direttamente il suo APK sul telefono.**
 
-1. Scarica AutoHub Connect Parking 1.0.17 e apri direttamente l'APK sul telefono. Se hai già Parking (o la precedente AutoHub ë-C3), installa sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
+1. Scarica AutoHub Connect Parking 1.0.40 e apri direttamente l'APK sul telefono. Se hai già Parking (o la precedente AutoHub ë-C3), installa sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
 2. In Parking tocca **AutoHub Connect 2.0 · Download e aggiornamento** (anche durante la prova gratuita). L'app prepara KingInstaller 2.5, controlla l'ultima versione Connect pubblicata, la scarica, ne verifica firma e SHA-256 e la passa a KingInstaller. Premi Installa e conferma le richieste del sistema.
-3. In alternativa, installa KingInstaller dal collegamento sopra, scarica l'APK Connect 2.0.7 e aprilo con KingInstaller.
+3. In alternativa, installa KingInstaller dal collegamento sopra, scarica l'APK Connect 2.0.30 e aprilo con KingInstaller.
 4. Se Connect è già installata, la stessa procedura la aggiorna senza disinstallarla. Se è già all'ultima versione, il pulsante resta disattivato e compare «AutoHub Connect è aggiornato».
 5. Apri entrambe le app sul telefono, una alla volta, con Internet disponibile per avviare la prova.
 6. Nella Home di ciascuna app premi il comando per abilitare il microfono e concedi il permesso richiesto, per la dettatura nelle ricerche.
@@ -56,10 +56,10 @@ Non è garantita l'assenza di ulteriori avvisi: Play Protect controlla anche le 
 
 ## Le due applicazioni
 
-Connect 2.0.7 e Parking 1.0.17 sono due applicazioni separate e possono essere installate insieme.
+Connect 2.0.30 e Parking 1.0.40 sono due applicazioni separate e possono essere installate insieme.
 
-- **AutoHub Connect 2.0.7** è utilizzabile anche durante la guida e si adatta all'area di visualizzazione assegnata da Android Auto.
-- **AutoHub Connect Parking 1.0.17** è utilizzabile soltanto con il veicolo parcheggiato e offre la visualizzazione a pieno schermo.
+- **AutoHub Connect 2.0.30** è utilizzabile anche durante la guida e si adatta all'area di visualizzazione assegnata da Android Auto.
+- **AutoHub Connect Parking 1.0.40** è utilizzabile soltanto con il veicolo parcheggiato e offre la visualizzazione a pieno schermo.
 
 Per chi guida, video, YouTube, navigazione web e mirroring vanno utilizzati con il veicolo parcheggiato.
 
@@ -85,4 +85,16 @@ Lo stesso codice di attivazione può essere inserito separatamente nelle due app
 
 Parking conserva il proprio controllo aggiornamenti (canale `autohub/latest.json`). Gli aggiornamenti di Connect si controllano da Parking con il riquadro **AutoHub Connect 2.0 · Download e aggiornamento** (canale `autohub/connect/latest.json`); la Home di Connect non include un controllo aggiornamenti proprio.
 
-Il file Parking mantiene il nome tecnico AutoHub-EC3-1.0.17.apk: è l'APK della versione AutoHub Connect Parking 1.0.17.
+Il file Parking mantiene il nome tecnico AutoHub-EC3-1.0.40.apk: è l'APK della versione AutoHub Connect Parking 1.0.40.
+
+## Privacy e diagnostica anonima
+
+AutoHub Connect Parking e AutoHub Connect possono inviare, al massimo una volta al giorno, un breve rapporto di diagnostica anonimo per aiutarci a correggere gli errori. Contiene solo: nome e versione dell'app, versione di Android, modello del telefono, versione di Android System WebView, motivi delle chiusure dell'app registrati da Android e codici di errore dell'app.
+
+**Non contiene** account, email, password, siti visitati, contenuti, posizione o identificativi del dispositivo; il servizio che lo riceve non salva l'indirizzo IP.
+
+L'invio è attivo di partenza e si può spegnere in qualsiasi momento sul telefono, nel riquadro informazioni dell'app: **«Invia diagnostica anonima»**. Il pulsante **Diagnostica** mostra sul telefono gli stessi dati. I rapporti sono conservati su Cloudflare e usati solo per migliorare AutoHub.
+
+**Account di servizi esterni:** YouTube, Prime Video e Disney+ si usano con il proprio account e secondo le condizioni di quei servizi. L'opzione «Salta pubblicità» di YouTube è spenta di partenza e può comportare limitazioni o il blocco dell'account Google: chi la attiva lo fa a proprio rischio. È consigliato usare YouTube senza accedere al proprio account.
+
+Contatti: zikarmidi.support@gmail.com
