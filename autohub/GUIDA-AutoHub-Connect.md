@@ -3,11 +3,11 @@ By Zicspanico
 
 ## Download ufficiali
 
-- [AutoHub Connect 2.0.40 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/connect/2.0.40/AutoHub-Connect-2.0.40.apk)
+- [AutoHub Connect 2.0.42 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/connect/2.0.42/AutoHub-Connect-2.0.42.apk)
 - [AutoHub Connect Parking 1.0.50 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-Connect-Parking.apk)
 
 Informazioni sulle versioni pubbliche:
-- [Connect 2.0.40](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/connect/2.0.40/RELEASE.md)
+- [Connect 2.0.42](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/connect/2.0.42/RELEASE.md)
 - [Parking 1.0.50](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/releases/autohub-parking-v1.0.50.md)
 
 ## Prima del collegamento all'auto: configura Android Auto
@@ -56,9 +56,9 @@ Non è garantita l'assenza di ulteriori avvisi: Play Protect controlla anche le 
 
 ## Le due applicazioni
 
-Connect 2.0.40 e Parking 1.0.50 sono due applicazioni separate e possono essere installate insieme.
+Connect 2.0.42 e Parking 1.0.50 sono due applicazioni separate e possono essere installate insieme.
 
-- **AutoHub Connect 2.0.40** è utilizzabile anche durante la guida e si adatta all'area di visualizzazione assegnata da Android Auto.
+- **AutoHub Connect 2.0.42** è utilizzabile anche durante la guida e si adatta all'area di visualizzazione assegnata da Android Auto.
 - **AutoHub Connect Parking 1.0.50** è utilizzabile soltanto con il veicolo parcheggiato e offre la visualizzazione a pieno schermo.
 
 Per chi guida, video, YouTube, navigazione web e mirroring vanno utilizzati con il veicolo parcheggiato.
