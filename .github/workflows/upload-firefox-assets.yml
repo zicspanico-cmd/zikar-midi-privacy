@@ -1,0 +1,44 @@
+name: Upload AutoHub Firefox edition assets
+# The Firefox-engine APKs (about 213 MB) do not fit in the repository as single files. They are pushed in
+# parts on this session branch only; this job joins them, checks the SHA-256 and attaches them to releases.
+on:
+  push:
+    branches: [ccr-b3f73d33-4cur82]
+    paths:
+      - 'release-upload/**'
+      - '.github/workflows/upload-firefox-assets.yml'
+permissions:
+  contents: write
+concurrency:
+  group: autohub-firefox-assets
+  cancel-in-progress: false
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Join, verify and attach the APKs
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd release-upload
+          cat parking.part-* > AutoHub-Connect-Parking-1.0.61.apk
+          cat connect.part-* > AutoHub-Connect-2.0.51.apk
+          sha256sum -c SHA256SUMS.txt
+          publish() {
+            local tag="$1" title="$2" notes="$3" apk="$4"
+            if ! gh release view "$tag" >/dev/null 2>&1; then
+              gh release create "$tag" --target main --title "$title" --notes-file "$notes" --prerelease --latest=false
+            fi
+            gh release upload "$tag" "$apk" --clobber
+            mkdir -p "$RUNNER_TEMP/verify-$tag"
+            gh release download "$tag" --pattern "$apk" --dir "$RUNNER_TEMP/verify-$tag"
+            test "$(sha256sum "$RUNNER_TEMP/verify-$tag/$apk" | cut -d ' ' -f 1)" = "$(grep " $apk\$" SHA256SUMS.txt | cut -d ' ' -f 1)"
+            echo "Published $apk on $tag"
+          }
+          publish autohub-firefox-v1.0.61 "AutoHub Connect Parking 1.0.61 · motore Firefox (in prova)" NOTE-parking.md AutoHub-Connect-Parking-1.0.61.apk
+          publish autohub-connect-firefox-v2.0.51 "AutoHub Connect 2.0.51 · motore Firefox (in prova)" NOTE-connect.md AutoHub-Connect-2.0.51.apk
