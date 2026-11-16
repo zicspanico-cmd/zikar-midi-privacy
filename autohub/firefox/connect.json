@@ -1,9 +1,9 @@
 {
   "packageName": "it.autohub.connect",
-  "versionCode": 257,
-  "versionName": "2.0.53",
+  "versionCode": 256,
+  "versionName": "2.0.52",
   "minSdk": 30,
-  "apkUrl": "https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-connect-firefox-v2.0.53/AutoHub-Connect-2.0.53.apk",
-  "sha256": "1da312d35843189ec56ac3b586987a56a592b3b12690880ada7b8d1791c81069",
-  "sizeBytes": 212792148
+  "apkUrl": "https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-connect-firefox-v2.0.52/AutoHub-Connect-2.0.52.apk",
+  "sha256": "501380ea2d2f28a735a02e520dfaf7fbe1d16b796a568b7b76fd24ccc43cf95d",
+  "sizeBytes": 212767572
 }
