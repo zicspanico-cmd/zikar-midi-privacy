@@ -4,10 +4,11 @@ By Zicspanico. Questa cartella contiene solo APK firmati, feed di aggiornamento 
 
 | App | Versione | APK | Feed |
 |---|---|---|---|
-| AutoHub Connect Parking | 1.0.50 (150) | [AutoHub-Connect-Parking.apk](AutoHub-Connect-Parking.apk) | [latest.json](latest.json) |
+| AutoHub Connect Parking | 1.0.59 (159) | [AutoHub-Connect-Parking.apk](AutoHub-Connect-Parking.apk) | [latest.json](latest.json) |
 | AutoHub Connect | 2.0.42 (246) | [connect/2.0.42/AutoHub-Connect-2.0.42.apk](connect/2.0.42/AutoHub-Connect-2.0.42.apk) | [connect/latest.json](connect/latest.json) |
 
 - `AutoHub-Connect-Parking.apk` è sempre l'ultima versione di Parking. Le copie con il vecchio nome tecnico restano solo per gli aggiornamenti automatici delle app già installate.
+- **Edizione con motore Firefox** (telefoni ARM a 64 bit, per lo Streaming di DAZN, NOW, Paramount+ e HBO Max): vedi [firefox/README.md](firefox/README.md). Parking la propone da sola a chi ha i requisiti.
 - AutoHub funziona con tutte le auto compatibili con Android Auto.
 - Le due app sono separate (identificativi Android diversi), con lo stesso certificato originale: aggiornare senza disinstallare.
 - Android 11 (API 30) o successivo. Guida completa: [GUIDA-AutoHub-Connect.md](GUIDA-AutoHub-Connect.md). Supporto: zikarmidi.support@gmail.com.
