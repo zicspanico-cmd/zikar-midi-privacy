@@ -4,11 +4,11 @@ By Zicspanico
 ## Download ufficiali
 
 - [AutoHub Connect 2.0.42 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/connect/2.0.42/AutoHub-Connect-2.0.42.apk)
-- [AutoHub Connect Parking 1.0.59 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-Connect-Parking.apk)
+- [AutoHub Connect Parking 1.0.62 — APK](https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-Connect-Parking.apk)
 
 Informazioni sulle versioni pubbliche:
 - [Connect 2.0.42](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/connect/2.0.42/RELEASE.md)
-- [Parking 1.0.59](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/releases/autohub-parking-v1.0.59.md)
+- [Parking 1.0.62](https://github.com/zicspanico-cmd/zikar-midi-privacy/blob/main/autohub/releases/autohub-parking-v1.0.62.md)
 
 ## Prima del collegamento all'auto: configura Android Auto
 
@@ -28,9 +28,9 @@ Senza questa configurazione le app installate esternamente potrebbero non compar
 
 ## Installazione passo per passo
 
-**AutoHub Connect si installa da AutoHub Connect Parking. Parking 1.0.59 si installa normalmente, aprendo direttamente il suo APK sul telefono.**
+**AutoHub Connect si installa da AutoHub Connect Parking. Parking 1.0.62 si installa normalmente, aprendo direttamente il suo APK sul telefono.**
 
-1. Scarica AutoHub Connect Parking 1.0.59 e apri direttamente l'APK sul telefono. Se hai già Parking, installa sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
+1. Scarica AutoHub Connect Parking 1.0.62 e apri direttamente l'APK sul telefono. Se hai già Parking, installa sopra l'app esistente senza disinstallarla, per conservare dati e attivazione.
 2. In Parking tocca **AutoHub Connect 2.0 · Download e aggiornamento** (anche durante la prova gratuita) e premi **Prepara installazione AutoHub Connect**: Android apre l'impostazione per consentire a Parking di installare app. Attivala e torna indietro.
 3. Premi **Installa AutoHub Connect**: Parking scarica l'ultima versione, ne verifica firma e SHA-256 e apre direttamente l'installatore di Android, già pronta per Android Auto. Premi Installa. Al ritorno Parking ti conferma se Connect è pronta per l'auto.
 4. Se hai già un APK di AutoHub Connect sul telefono (per esempio ricevuto per una prova), premi **Installa da file (APK)** e sceglilo: Parking ti mostra la versione del file e quella installata, poi lo installa allo stesso modo.
@@ -56,10 +56,10 @@ Non è garantita l'assenza di ulteriori avvisi: Play Protect controlla anche le 
 
 ## Le due applicazioni
 
-Connect 2.0.42 e Parking 1.0.59 sono due applicazioni separate e possono essere installate insieme.
+Connect 2.0.42 e Parking 1.0.62 sono due applicazioni separate e possono essere installate insieme.
 
 - **AutoHub Connect 2.0.42** è utilizzabile anche durante la guida e si adatta all'area di visualizzazione assegnata da Android Auto.
-- **AutoHub Connect Parking 1.0.59** è utilizzabile soltanto con il veicolo parcheggiato e offre la visualizzazione a pieno schermo.
+- **AutoHub Connect Parking 1.0.62** è utilizzabile soltanto con il veicolo parcheggiato e offre la visualizzazione a pieno schermo.
 
 Per chi guida, video, YouTube, navigazione web e mirroring vanno utilizzati con il veicolo parcheggiato.
 
