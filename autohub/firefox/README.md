@@ -4,8 +4,8 @@ By Zicspanico. Edizione per telefoni **ARM a 64 bit**. Serve per vedere in Strea
 
 | App | Versione | APK (circa 213 MB) | Feed |
 |---|---|---|---|
-| AutoHub Connect Parking | 1.0.65 (165) | [AutoHub-Connect-Parking-1.0.65.apk](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-firefox-v1.0.65/AutoHub-Connect-Parking-1.0.65.apk) | [latest.json](latest.json) |
-| AutoHub Connect | 2.0.54 (258) | [AutoHub-Connect-2.0.54.apk](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-connect-firefox-v2.0.54/AutoHub-Connect-2.0.54.apk) | [connect.json](connect.json) |
+| AutoHub Connect Parking | 1.0.66 (166) | [AutoHub-Connect-Parking-1.0.66.apk](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-firefox-v1.0.66/AutoHub-Connect-Parking-1.0.66.apk) | [latest.json](latest.json) |
+| AutoHub Connect | 2.0.55 (259) | [AutoHub-Connect-2.0.55.apk](https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-connect-firefox-v2.0.55/AutoHub-Connect-2.0.55.apk) | [connect.json](connect.json) |
 
 - **Come si ottiene**: AutoHub Connect Parking 1.0.64 o successiva propone da sola la propria edizione con Firefox ai telefoni che hanno i requisiti. **AutoHub Connect con Firefox si installa dall'installatore di Connect dentro Parking** (pulsante «Installa AutoHub Connect con Firefox»), anche restando sulla Parking normale: Connect va sempre installata da Parking, mai aprendo direttamente l'APK, altrimenti Android Auto non la elenca.
 - Stesso certificato originale e stessi identificativi: si installa sopra le app esistenti, attivazione e dati restano.
