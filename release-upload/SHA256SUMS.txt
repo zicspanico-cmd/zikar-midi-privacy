@@ -1,2 +1,2 @@
-e20db041a1303f4012c44335578afb3edf7268f42f6f08963fb9ad840a19f77a  AutoHub-Connect-Parking-1.0.66.apk
-13cb0ae8d036673959a80320529cc9aae55cb99373d500c518bf0d5c0b4271a6  AutoHub-Connect-2.0.55.apk
+777303ef235be8bf76aa2d8f998ed5b7da2ea75df999cae6d95d52213857d797  AutoHub-Connect-Parking-Firefox-2.2.0.apk
+f107eac3bb1b526fd047b02641bc2cb122b756c5d346989501abfec254fce107  AutoHub-Connect-Firefox-2.2.0.apk
