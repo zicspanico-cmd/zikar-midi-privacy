@@ -26,8 +26,8 @@ jobs:
         run: |
           set -euo pipefail
           cd release-upload
-          cat parking.part-* > AutoHub-Connect-Parking-1.0.65.apk
-          cat connect.part-* > AutoHub-Connect-2.0.54.apk
+          cat parking.part-* > AutoHub-Connect-Parking-1.0.66.apk
+          cat connect.part-* > AutoHub-Connect-2.0.55.apk
           sha256sum -c SHA256SUMS.txt
           publish() {
             local tag="$1" title="$2" notes="$3" apk="$4"
@@ -40,5 +40,5 @@ jobs:
             test "$(sha256sum "$RUNNER_TEMP/verify-$tag/$apk" | cut -d ' ' -f 1)" = "$(grep " $apk\$" SHA256SUMS.txt | cut -d ' ' -f 1)"
             echo "Published $apk on $tag"
           }
-          publish autohub-firefox-v1.0.65 "AutoHub Connect Parking 1.0.65 · motore Firefox" NOTE-parking.md AutoHub-Connect-Parking-1.0.65.apk
-          publish autohub-connect-firefox-v2.0.54 "AutoHub Connect 2.0.54 · motore Firefox" NOTE-connect.md AutoHub-Connect-2.0.54.apk
+          publish autohub-firefox-v1.0.66 "AutoHub Connect Parking 1.0.66 · motore Firefox" NOTE-parking.md AutoHub-Connect-Parking-1.0.66.apk
+          publish autohub-connect-firefox-v2.0.55 "AutoHub Connect 2.0.55 · motore Firefox" NOTE-connect.md AutoHub-Connect-2.0.55.apk

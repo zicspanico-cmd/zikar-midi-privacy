@@ -1,2 +1,2 @@
-972e0b760cbd0dee96e1323c2b4036650b97fd4f19b4cde827d569f7a11fbfb7  AutoHub-Connect-Parking-1.0.65.apk
-18e7c477672d7ba88f98b69b6683fdd44b3b88773d761e05bfde0e1e933c17ef  AutoHub-Connect-2.0.54.apk
+e20db041a1303f4012c44335578afb3edf7268f42f6f08963fb9ad840a19f77a  AutoHub-Connect-Parking-1.0.66.apk
+13cb0ae8d036673959a80320529cc9aae55cb99373d500c518bf0d5c0b4271a6  AutoHub-Connect-2.0.55.apk
