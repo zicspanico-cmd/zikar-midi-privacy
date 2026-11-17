@@ -1,9 +1,7 @@
-# AutoHub Connect 2.0.51 — edizione con motore Firefox (in prova)
+# AutoHub Connect 2.0.54 — edizione con motore Firefox
 
-Edizione per telefoni **ARM a 64 bit**, circa 213 MB. Stesso pacchetto e stesso certificato della 2.0.42.
+Edizione per telefoni **ARM a 64 bit**, circa 213 MB. Stesso pacchetto e stesso certificato delle versioni precedenti.
 
 - **Streaming con il motore di Firefox**: DAZN, NOW, Paramount+ e HBO Max, con audio dalle casse dell'auto.
 - **Web**: pagina iniziale con Indirizzo, Preferiti e Cerca con Google, ciascuna col microfono.
-- Si installa e si aggiorna da AutoHub Connect Parking 1.0.61 o successiva.
-
-Pre-release: non è ancora proposta dall'aggiornamento automatico.
+- **Si installa e si aggiorna soltanto da AutoHub Connect Parking** (1.0.64 o successiva), dal pulsante «Installa AutoHub Connect con Firefox»: solo così Android Auto la riconosce. Non contiene aggiornamenti interni e sostituisce la 2.0.52 e la 2.0.53.
