@@ -1,9 +1,9 @@
 {
   "packageName": "it.autohub.ec3.hostprobe",
-  "versionCode": 166,
-  "versionName": "1.0.66",
+  "versionCode": 220,
+  "versionName": "2.2.0",
   "minSdk": 30,
-  "apkUrl": "https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-firefox-v1.0.66/AutoHub-Connect-Parking-1.0.66.apk",
-  "sha256": "e20db041a1303f4012c44335578afb3edf7268f42f6f08963fb9ad840a19f77a",
-  "sizeBytes": 213140700
+  "apkUrl": "https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-firefox-v2.2.0/AutoHub-Connect-Parking-Firefox-2.2.0.apk",
+  "sha256": "777303ef235be8bf76aa2d8f998ed5b7da2ea75df999cae6d95d52213857d797",
+  "sizeBytes": 213248148
 }
