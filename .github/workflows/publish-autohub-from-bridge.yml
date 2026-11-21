@@ -1,0 +1,71 @@
+name: Pubblica tutte le 4 APK AutoHub da trasferimento verificato
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'autohub/bridge-publish-ready.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Recupera le 4 APK tramite GitHub OIDC e controlla SHA-256
+        env:
+          BRIDGE_URL: https://autohub-release-transfer-20261121.zicspanico.workers.dev
+          OIDC_AUDIENCE: autohub-four-apk-transfer-20261121
+        shell: bash
+        run: |
+          set -euo pipefail
+          refresh_jwt() {
+            JWT=$(curl -fsSL --retry 3 -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=${OIDC_AUDIENCE}" | jq -r .value)
+            test -n "$JWT" && test "$JWT" != null
+          }
+          mkdir -p apk chunks
+          n=0
+          while IFS=':' read -r filename key bytes sha; do
+            test -n "$filename" || continue
+            output="apk/$filename"
+            : > "$output"
+            chunks_count="$(((bytes + 5242880 - 1) / 5242880))"
+            for ((i=0;i<chunks_count;i++)); do
+              if (( n % 10 == 0 )); then refresh_jwt; fi
+              curl -fsS --retry 12 --retry-all-errors --retry-delay 6 -H "Authorization: Bearer $JWT" "$BRIDGE_URL/chunk/$key/$i" -o chunks/part
+              cat chunks/part >> "$output"
+              n=$((n+1))
+            done
+            test "$(stat -c '%s' "$output")" -eq "$bytes"
+            echo "$sha  $output" | sha256sum -c -
+            unzip -tq "$output" >/dev/null
+            echo "Verificato: $filename"
+          done <<'ASSETS'
+          1-CONNECT-2.2.0-firefox.apk:connect-firefox:212879172:5aae016ace359f4198d12e276b14fe8ad6be19b2fedbe750a3776d7a56fc842a
+          2-PARKING-2.2.0-firefox.apk:parking-firefox:213248204:140a73a1d899b85fbaa71239f6906be8e0017de6b488994084571c6483413ddc
+          3-CONNECT-2.1.1-normale.apk:connect-lite:15848577:e357ca841199164d538798352ba04bd5c8fb50b8019ed56c38f50868172742a1
+          4-PARKING-2.1.1-normale.apk:parking-lite:10486950:932f5be23a73c34dc39c890286b1b2ccc376d630bf377a1fd54c180da4743eb8
+          ASSETS
+          (cd apk && sha256sum *.apk > SHA256SUMS.txt)
+      - name: Pubblica release e verifica il download pubblico delle 4 APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          REPO="zicspanico-cmd/zikar-midi-privacy"
+          TAG="autohub-pubbliche-mirroring"
+          if ! gh release view "$TAG" -R "$REPO" >/dev/null 2>&1; then
+            gh release create "$TAG" -R "$REPO" --draft --latest=false --title "AutoHub - mirroring interattivo (4 APK)" --notes "Nuova release AutoHub con mirroring comandabile dal touchscreen dello stereo: Parking Lite, Connect Lite e le due edizioni Firefox per dispositivi compatibili. Le APK conservano gli stessi versionCode delle precedenti: per gli aggiornamenti automatici servirà una build con versionCode incrementato. Utilizzare video, web e mirroring solo a veicolo fermo."
+          fi
+          gh release upload "$TAG" apk/*.apk apk/SHA256SUMS.txt -R "$REPO" --clobber
+          mkdir -p verificati
+          gh release download "$TAG" -R "$REPO" --pattern '*.apk' --dir verificati
+          cp apk/SHA256SUMS.txt verificati/SHA256SUMS.txt
+          (cd verificati && sha256sum -c SHA256SUMS.txt)
+          gh release edit "$TAG" -R "$REPO" --draft=false --latest=false
+          echo "TUTTE LE QUATTRO APK PUBBLICATE E VERIFICATE."
