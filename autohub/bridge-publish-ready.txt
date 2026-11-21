@@ -1,0 +1,2 @@
+Trigger per release AutoHub mirroring, 4 APK firmate, 2026-11-21.
+La copia passa per GitHub OIDC + Cloudflare KV e sarà nuovamente verificata prima della pubblicazione.
