@@ -3,7 +3,7 @@
   "versionCode": 220,
   "versionName": "2.2.0",
   "minSdk": 30,
-  "apkUrl": "https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-firefox-v2.2.0/AutoHub-Connect-Parking-Firefox-2.2.0.apk",
-  "sha256": "777303ef235be8bf76aa2d8f998ed5b7da2ea75df999cae6d95d52213857d797",
-  "sizeBytes": 213248148
+  "apkUrl": "https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-pubbliche-mirroring/2-PARKING-2.2.0-firefox.apk",
+  "sha256": "140a73a1d899b85fbaa71239f6906be8e0017de6b488994084571c6483413ddc",
+  "sizeBytes": 213248204
 }
