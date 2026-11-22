@@ -4,5 +4,6 @@
   "versionName": "2.1.1",
   "minSdk": 30,
   "apkUrl": "https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/AutoHub-EC3-2.1.1.apk",
-  "sha256": "a56c0290653170ade551549302a191da4618518964efd3d1262b378d8ea2a938"
+  "sha256": "932f5be23a73c34dc39c890286b1b2ccc376d630bf377a1fd54c180da4743eb8",
+  "sizeBytes": 10486950
 }
