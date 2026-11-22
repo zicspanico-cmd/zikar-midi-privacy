@@ -3,7 +3,7 @@
   "versionCode": 256,
   "versionName": "2.1.1",
   "minSdk": 30,
-  "apkUrl": "https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-pubbliche-mirroring/3-CONNECT-2.1.1-normale.apk",
+  "apkUrl": "https://raw.githubusercontent.com/zicspanico-cmd/zikar-midi-privacy/main/autohub/connect/2.1.1/AutoHub-Connect-2.1.1.apk",
   "sha256": "e357ca841199164d538798352ba04bd5c8fb50b8019ed56c38f50868172742a1",
   "sizeBytes": 15848577
 }
