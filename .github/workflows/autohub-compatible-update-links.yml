@@ -1,0 +1,64 @@
+name: AutoHub - compatibilita updater APK e nomi legacy
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/autohub-compatible-update-links.yml'
+permissions:
+  contents: write
+concurrency:
+  group: autohub-compatible-update-links
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: autohub-pubbliche-mirroring
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verifica release firmate e crea alias accettati dall'updater
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p apk aliases verification
+          gh release download "$TAG" -R "$GITHUB_REPOSITORY" --pattern '*.apk' --dir apk
+          cd apk
+          echo '5aae016ace359f4198d12e276b14fe8ad6be19b2fedbe750a3776d7a56fc842a  1-CONNECT-2.2.0-firefox.apk' > SHA256SUMS.txt
+          echo '140a73a1d899b85fbaa71239f6906be8e0017de6b488994084571c6483413ddc  2-PARKING-2.2.0-firefox.apk' >> SHA256SUMS.txt
+          echo 'e357ca841199164d538798352ba04bd5c8fb50b8019ed56c38f50868172742a1  3-CONNECT-2.1.1-normale.apk' >> SHA256SUMS.txt
+          echo '932f5be23a73c34dc39c890286b1b2ccc376d630bf377a1fd54c180da4743eb8  4-PARKING-2.1.1-normale.apk' >> SHA256SUMS.txt
+          sha256sum -c SHA256SUMS.txt
+          cp 1-CONNECT-2.2.0-firefox.apk ../aliases/AutoHub-Connect-2.2.0.apk
+          cp 2-PARKING-2.2.0-firefox.apk ../aliases/AutoHub-Connect-Parking-2.2.0.apk
+          cp 3-CONNECT-2.1.1-normale.apk ../aliases/AutoHub-Connect-2.1.1.apk
+          cp 4-PARKING-2.1.1-normale.apk ../aliases/AutoHub-Connect-Parking-2.1.1.apk
+          cd ..
+          gh release upload "$TAG" aliases/*.apk -R "$GITHUB_REPOSITORY" --clobber
+          gh release download "$TAG" -R "$GITHUB_REPOSITORY" --pattern 'AutoHub-*.apk' --dir verification
+          echo '5aae016ace359f4198d12e276b14fe8ad6be19b2fedbe750a3776d7a56fc842a  verification/AutoHub-Connect-2.2.0.apk' | sha256sum -c -
+          echo '140a73a1d899b85fbaa71239f6906be8e0017de6b488994084571c6483413ddc  verification/AutoHub-Connect-Parking-2.2.0.apk' | sha256sum -c -
+          echo 'e357ca841199164d538798352ba04bd5c8fb50b8019ed56c38f50868172742a1  verification/AutoHub-Connect-2.1.1.apk' | sha256sum -c -
+          echo '932f5be23a73c34dc39c890286b1b2ccc376d630bf377a1fd54c180da4743eb8  verification/AutoHub-Connect-Parking-2.1.1.apk' | sha256sum -c -
+      - name: Allinea i file legacy senza cambiare identificativi o versionCode
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Non alterare i feed in questo job: verranno cambiati solo dopo la copia verificata.
+          echo 'a56c0290653170ade551549302a191da4618518964efd3d1262b378d8ea2a938  autohub/AutoHub-EC3-2.1.1.apk' | sha256sum -c -
+          echo 'bf65129db6dbc740ea21dbd72c06c1cb8e9c1f503a99762a731968572b95493a  autohub/connect/2.1.1/AutoHub-Connect-2.1.1.apk' | sha256sum -c -
+          cp apk/4-PARKING-2.1.1-normale.apk autohub/AutoHub-EC3-2.1.1.apk
+          cp apk/4-PARKING-2.1.1-normale.apk autohub/AutoHub-Connect-Parking.apk
+          cp apk/4-PARKING-2.1.1-normale.apk autohub/AutoHub-EC3.apk
+          cp apk/3-CONNECT-2.1.1-normale.apk autohub/connect/2.1.1/AutoHub-Connect-2.1.1.apk
+          echo '932f5be23a73c34dc39c890286b1b2ccc376d630bf377a1fd54c180da4743eb8  autohub/AutoHub-EC3-2.1.1.apk' | sha256sum -c -
+          echo 'e357ca841199164d538798352ba04bd5c8fb50b8019ed56c38f50868172742a1  autohub/connect/2.1.1/AutoHub-Connect-2.1.1.apk' | sha256sum -c -
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add autohub/AutoHub-EC3-2.1.1.apk autohub/AutoHub-Connect-Parking.apk autohub/AutoHub-EC3.apk autohub/connect/2.1.1/AutoHub-Connect-2.1.1.apk
+          if ! git diff --cached --quiet; then
+            git commit -m "Sincronizza APK normali con mirroring usando i nomi legacy"
+            git push
+          fi
