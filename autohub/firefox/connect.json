@@ -1,9 +1,9 @@
 {
   "packageName": "it.autohub.connect",
-  "versionCode": 280,
-  "versionName": "2.2.0",
+  "versionCode": 281,
+  "versionName": "2.2.1",
   "minSdk": 30,
-  "apkUrl": "https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-pubbliche-mirroring/AutoHub-Connect-2.2.0.apk",
-  "sha256": "5aae016ace359f4198d12e276b14fe8ad6be19b2fedbe750a3776d7a56fc842a",
+  "apkUrl": "https://github.com/zicspanico-cmd/zikar-midi-privacy/releases/download/autohub-guida-mirroring-2.1.2-2.2.1/AutoHub-Connect-2.2.1.apk",
+  "sha256": "752378298efdfcf7d4e8fcea81f651be23972060eef885ebb27967fc3d4493c1",
   "sizeBytes": 212879172
 }
